@@ -5,7 +5,11 @@ using TMPro;
 using UnityEditor;
 using UnityEngine;
 
-#if TMP_3_2_0_PRE_2 || UGUI_2_0
+// The element type of TMP_FontFeatureTable.glyphPairAdjustmentRecords changed across
+// TextMeshPro versions. Unity 6 (UGUI 2.0) and TMP 3.2+ expose the TextCore.LowLevel
+// types; older TMP (e.g. 3.0.6 on Unity 2021/2022) exposes the TMP_* wrapper types.
+// Alias to whichever matches the installed version so the rest of the file is uniform.
+#if UNITY_6000_0_OR_NEWER || UGUI_2_0 || TMP_3_2_0_PRE_2
 using GlyphAdjustmentRecord = UnityEngine.TextCore.LowLevel.GlyphAdjustmentRecord;
 using GlyphPairAdjustmentRecord = UnityEngine.TextCore.LowLevel.GlyphPairAdjustmentRecord;
 using GlyphValueRecord = UnityEngine.TextCore.LowLevel.GlyphValueRecord;
@@ -1323,7 +1327,7 @@ namespace EasyThaiFont
         /// <summary>Forces every scene TextMeshPro that uses this font to rebuild its mesh.</summary>
         void RefreshTextMeshProComponents(TMP_FontAsset fontAsset)
         {
-#if UNITY_2023_1_OR_NEWER
+#if UNITY_6000_0_OR_NEWER || UNITY_2022_2_OR_NEWER
             var tmpTexts = Object.FindObjectsByType<TMP_Text>(FindObjectsSortMode.None);
 #else
             var tmpTexts = Object.FindObjectsOfType<TMP_Text>();
