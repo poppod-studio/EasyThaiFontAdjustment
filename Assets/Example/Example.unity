@@ -157,7 +157,7 @@ Camera:
   m_GameObject: {fileID: 25482166}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 2
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -278,7 +278,7 @@ MonoBehaviour:
     \u0E40\u0E2B\u0E07\u0E37\u0E48\u0E2D \u0E40\u0E21\u0E35\u0E4A\u0E22\u0E30 \u0E40\u0E1C\u0E35\u0E4A\u0E22\u0E30"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6e321301e5da7439aadadf5f047b04e2, type: 2}
-  m_sharedMaterial: {fileID: -8795524275884752223, guid: 6e321301e5da7439aadadf5f047b04e2, type: 2}
+  m_sharedMaterial: {fileID: 7444417274021382556, guid: 6e321301e5da7439aadadf5f047b04e2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

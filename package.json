@@ -1,19 +1,27 @@
 {
-  "name": "com.poppod.easythaifontadjustment",
+  "name": "com.poppodstudio.easy-thai-font-adjustment",
   "version": "1.0.0",
   "displayName": "Easy Thai Font Adjustment",
-  "description": "One-click solution for fixing Thai floating vowels and tone marks in TextMeshPro fonts. Automatically adjusts 562 character pairs with smart kerning.",
+  "description": "A powerful Unity Editor tool that fixes floating Thai vowels and tone marks in TextMeshPro fonts with one click. Automatically generates 522 smart kerning pairs based on font metrics, with templates, custom text analysis, and full undo support.",
   "unity": "2021.3",
+  "unityRelease": "0f1",
+  "documentationUrl": "https://github.com/poppod56/EasyThaiFontAdjustment#readme",
+  "changelogUrl": "https://github.com/poppod56/EasyThaiFontAdjustment/blob/main/CHANGELOG.md",
+  "licensesUrl": "https://github.com/poppod56/EasyThaiFontAdjustment/blob/main/LICENSE",
   "keywords": [
-    "Thai",
-    "Font",
-    "TextMeshPro",
-    "Kerning",
-    "Typography",
-    "Localization"
+    "editor",
+    "thai",
+    "font",
+    "textmeshpro",
+    "kerning",
+    "typography",
+    "localization",
+    "tool",
+    "utility"
   ],
   "author": {
-    "name": "Poppod",
+    "name": "Poppod Studio",
+    "email": "support@poppod-studio.com",
     "url": "https://github.com/poppod56"
   },
   "repository": {

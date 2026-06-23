@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - One-click auto fix for all Thai character positioning issues
-- 562 character pairs covering all Thai combinations
+- 522 character pairs covering all Thai combinations
 - Smart kerning calculation based on font metrics
 - Backup and undo system
 - Advanced editing mode with 3 tabs (Templates, Custom, Rules)
@@ -27,6 +27,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Individual pair editing in Rules tab
 - Dynamic value calculation based on font size
 - Unity Undo/Redo integration
+- Bilingual UI: English labels with Thai terms in parentheses
+- Thai-glyph coverage check that warns on fonts missing Thai characters
+- Session persistence (last font, sample text, panel state) via EditorPrefs
+- Context-menu entry on TMP Font Assets (right-click the Inspector header)
+- Editor assembly definition for clean UPM / Asset Store distribution
 
 ### Changed
 - N/A (Initial release)
@@ -58,4 +63,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Version History Summary
 
-- **1.0.0** - Initial release with one-click fix and 562 character pairs
+- **1.0.0** - Initial release with one-click fix and 522 character pairs

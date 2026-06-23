@@ -1,14 +1,24 @@
 # Easy Thai Font Adjustment
 
-Unity Editor tool for fixing Thai floating vowels and tone marks in TextMeshPro fonts with one click.
+A powerful Unity Editor tool for fixing Thai floating vowels and tone marks in TextMeshPro fonts with one click.
+
+![Unity Version](https://img.shields.io/badge/Unity-2021.3%2B-blue)
+![TextMeshPro](https://img.shields.io/badge/TextMeshPro-3.0%2B-orange)
+![License](https://img.shields.io/badge/License-MIT-green)
+
+> By **Poppod Studio**
 
 ## Features
 
 - **One-Click Auto Fix** - Automatically fixes all Thai character positioning issues
-- **562 Character Pairs** - Covers all possible Thai character combinations
+- **522 Character Pairs** - Covers all possible Thai character combinations
 - **Smart Calculation** - Automatically calculates kerning values based on font size
 - **Undo Support** - Built-in backup and undo functionality
 - **Advanced Editing** - Fine-tune individual character pairs if needed
+- **Bilingual UI** - English labels with Thai terms in parentheses
+- **Coverage Check** - Warns when a font is missing Thai glyphs
+- **Session Memory** - Remembers your last font and settings (EditorPrefs)
+- **Context Menu** - Right-click a TMP Font Asset to launch the tool
 
 ## Problem Solved
 
@@ -29,7 +39,7 @@ Thai fonts in TextMeshPro often display vowels and tone marks incorrectly:
 
 ### Method 2: Manual Installation
 1. Download the repository
-2. Copy `Assets/Editor/EasyThaiFontAdjustment.cs` to your project's `Assets/Editor/` folder
+2. Copy `Assets/EasyThaiFontAdjustment/Editor/EasyThaiFontAdjustment.cs` to your project's `Assets/` (any folder) folder
 3. Unity will compile automatically
 
 ### Method 3: Unity Asset Store
@@ -75,10 +85,13 @@ The tool adds **Glyph Pair Adjustment Records** to your TextMeshPro Font Asset, 
 | Upper Vowels + Tone Marks | 24 | Stacked marks |
 | Upper Vowels + Thanthakhat | 6 | Vowel + ์ |
 | Sara Am + Tone Marks | 4 | ำ + tone marks |
-| Ascender Consonants | 44 | ป ฝ ฟ ฬ combinations |
+| Ascender Consonants | 44* | ป ฝ ฟ ฬ combinations (stronger offset) |
 | Descender Consonants | 4 | ฎ ฏ + ุ ู |
 
-**Total: 562 pairs**
+\* Ascender pairs overlap the consonant templates and **override** their values with a
+stronger offset rather than adding new pairs, so they are not counted in the total.
+
+**Total: 522 unique pairs**
 
 ## Advanced Usage
 
@@ -103,7 +116,7 @@ The tool adds **Glyph Pair Adjustment Records** to your TextMeshPro Font Asset, 
 
 ## Documentation
 
-Full documentation (Thai): [EASY_THAI_FONT_ADJUSTMENT_GUIDE.md](./Assets/Editor/EASY_THAI_FONT_ADJUSTMENT_GUIDE.md)
+Full documentation (Thai): [EASY_THAI_FONT_ADJUSTMENT_GUIDE.md](./Assets/EasyThaiFontAdjustment/Editor/EASY_THAI_FONT_ADJUSTMENT_GUIDE.md)
 
 ## Troubleshooting
 
@@ -127,6 +140,7 @@ Contributions welcome! Please:
 
 ## Support
 
+- Email: support@poppod-studio.com
 - Issues: [GitHub Issues](https://github.com/poppod56/EasyThaiFontAdjustment/issues)
 - Discussions: [GitHub Discussions](https://github.com/poppod56/EasyThaiFontAdjustment/discussions)
 
@@ -135,13 +149,15 @@ Contributions welcome! Please:
 ### Version 1.0.0 (2025-11-07)
 - Initial release
 - One-click auto fix
-- 7 templates covering 562 character pairs
+- 7 templates covering 522 character pairs
 - Undo support
 - Advanced editing mode
 
 ## Credits
 
-Created for Unity Thai developers who need proper Thai text rendering.
+Created by **Poppod Studio** for Unity Thai developers who need proper Thai text rendering.
+
+© 2025 Poppod Studio. Released under the MIT License.
 
 ## Keywords
 

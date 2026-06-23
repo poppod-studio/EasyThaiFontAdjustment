@@ -19,7 +19,7 @@
 
 ### Manual Install
 ```
-Copy Assets/Editor/EasyThaiFontAdjustment.cs to your Assets/Editor/ folder
+Copy Assets/EasyThaiFontAdjustment/Editor/EasyThaiFontAdjustment.cs to your Assets/ folder
 ```
 
 ## Quick Start
@@ -34,7 +34,7 @@ Tools → Easy Thai Font Adjustment
 ## Features
 
 ### One-Click Fix
-Automatically fixes all 562 Thai character pair combinations in seconds.
+Automatically fixes all 522 Thai character pair combinations in seconds.
 
 ### Smart Calculation
 Kerning values are calculated based on:
@@ -166,11 +166,12 @@ Solution: Check font coverage
 ### 1.0.0 (2025-11-07)
 - Initial release
 - One-click auto fix
-- 562 character pairs
+- 522 character pairs
 - Undo support
 
 ## Support
 
+- Email: support@poppod-studio.com
 - GitHub Issues: Report bugs and request features
 - GitHub Discussions: Ask questions and share tips
 - Documentation: This file and inline comments
@@ -178,3 +179,7 @@ Solution: Check font coverage
 ## License
 
 MIT License - Free for commercial and personal use
+
+---
+
+© 2025 Poppod Studio
