@@ -1,0 +1,105 @@
+EASY THAI FONT ADJUSTMENT - DOCUMENTATION
+==========================================
+By Poppod Studio
+
+TABLE OF CONTENTS
+-----------------
+1. Installation
+2. Quick Start
+3. Features
+4. Advanced Usage
+5. API Reference
+6. Troubleshooting
+7. Best Practices
+
+
+1. INSTALLATION
+---------------
+Unity Package Manager (Git):
+   1. Window > Package Manager
+   2. + > Add package from git URL
+   3. https://github.com/poppod56/EasyThaiFontAdjustment.git
+
+Asset Store / Manual:
+   Import the package. All content lives under Assets/Poppod/.
+   The tool is Editor-only (Assets/Poppod/Editor/).
+
+
+2. QUICK START
+--------------
+   Tools > Easy Thai Font Adjustment
+   -> Select a TMP Font Asset
+   -> Click "Fix Everything Automatically"
+   -> Done!
+
+
+3. FEATURES
+-----------
+One-Click Fix
+   Automatically fixes all 522 Thai character pair combinations in seconds.
+
+Smart Calculation
+   Kerning values are calculated from:
+   - Font point size
+   - Ascender / descender height
+   - Scale factor
+
+Undo Support
+   - Automatic backup before changes
+   - One-click undo
+   - Unity Undo integration (Ctrl/Cmd + Z)
+
+Templates System
+   7 pre-configured templates covering consonants + vowels,
+   vowels + tone marks, and special ascender/descender cases.
+
+
+4. ADVANCED USAGE
+-----------------
+Custom Text Analysis
+   1. Advanced Options > Custom Tab
+   2. Enter sample text
+   3. Click "Analyze and Add Rules"
+
+Fine-Tuning
+   1. Advanced Options > Rules Tab
+   2. Edit X/Y values
+   3. Select / deselect pairs
+   4. Apply changes
+
+Template Customization
+   1. Advanced Options > Templates Tab
+   2. Select a template
+   3. Adjust default X/Y and offset values
+   4. Add rules
+
+
+5. API REFERENCE
+----------------
+See ScriptReference.txt for the full public API surface.
+
+
+6. TROUBLESHOOTING
+------------------
+Changes Not Visible
+   Reimport the Font Asset (Select > Right-click > Reimport).
+
+Incorrect Values
+   Use auto-calculation; only use offset for fine-tuning.
+
+Missing Characters
+   Check the font's Character Table includes the Thai Unicode range;
+   regenerate the font atlas if needed.
+
+
+7. BEST PRACTICES
+-----------------
+   1. Always back up Font Assets before applying.
+   2. Test with real text after applying changes.
+   3. Use one-click for general fixes.
+   4. Use advanced options only for special cases.
+   5. Document custom values for future reference.
+
+------------------------------------------
+(c) 2025 Poppod Studio - MIT License
+Support: support@poppod-studio.com

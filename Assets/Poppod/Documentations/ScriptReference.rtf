@@ -1,0 +1,67 @@
+{\rtf1\ansi\deff0{\fonttbl{\f0\fmodern Courier New;}}\f0\fs20
+EASY THAI FONT ADJUSTMENT - SCRIPT REFERENCE\par
+============================================\par
+By Poppod Studio\par
+\par
+Namespace: EasyThaiFont\par
+Assembly:  EasyThaiFontAdjustment.Editor  (Editor-only)\par
+Type:      public class EasyThaiFontAdjustment : EditorWindow\par
+\par
+\par
+ENTRY POINTS\par
+------------\par
+[MenuItem("Tools/Easy Thai Font Adjustment")]\par
+public static void ShowWindow()\par
+   Opens the tool window from the Unity menu bar.\par
+\par
+[MenuItem("CONTEXT/TMP_FontAsset/Easy Thai Font Adjustment")]\par
+static void ShowWindowForFontAsset(MenuCommand command)\par
+   Opens the tool with a font preselected, from a TMP_FontAsset\par
+   context menu.\par
+\par
+\par
+PUBLIC API\par
+----------\par
+public void SetFont(TMP_FontAsset font)\par
+   Sets the active font asset the tool operates on.\par
+\par
+\par
+DATA STRUCTURES\par
+---------------\par
+class AdjustmentRule\par
+   string ruleName;       // human-readable rule name\par
+   char   firstChar;      // first glyph in the pair\par
+   char   secondChar;     // second glyph in the pair\par
+   float  xPlacement;     // X offset applied to the second glyph\par
+   float  yPlacement;     // Y offset applied to the second glyph\par
+   bool   selected;       // included on Apply\par
+   string category;       // template/category grouping\par
+   string DisplayName;    // "firstChar + secondChar"\par
+   string Key;            // "firstChar_secondChar" (de-dup key)\par
+\par
+class PresetConfig\par
+   string name;\par
+   string description;\par
+   float  defaultX;       // calculated base value\par
+   float  defaultY;\par
+   float  offsetX;        // extra manual offset\par
+   float  offsetY;\par
+   float  FinalX;         // defaultX + offsetX\par
+   float  FinalY;         // defaultY + offsetY\par
+\par
+\par
+HOW IT WRITES TO THE FONT\par
+-------------------------\par
+Adjustments are written as Glyph Pair Adjustment Records into\par
+TMP_FontAsset.fontFeatureTable.glyphPairAdjustmentRecords.\par
+\par
+The record element type differs across versions. The tool aliases it\par
+via versionDefines so it compiles on both:\par
+   - TMP 3.0.6 (Unity 2021/2022): TMPro.TMP_GlyphPairAdjustmentRecord\par
+   - TMP 3.2+ / UGUI 2.0 / Unity 6: UnityEngine.TextCore.LowLevel.GlyphPairAdjustmentRecord\par
+\par
+\par
+--------------------------------------------\par
+(c) 2025 Poppod Studio - support@poppod-studio.com\par
+
+}

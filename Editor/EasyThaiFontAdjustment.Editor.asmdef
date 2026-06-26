@@ -1,0 +1,24 @@
+{
+    "name": "EasyThaiFontAdjustment.Editor",
+    "rootNamespace": "EasyThaiFont",
+    "references": [
+        "Unity.TextMeshPro"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.ugui",
+            "expression": "2.0.0",
+            "define": "UGUI_2_0_OR_NEWER"
+        }
+    ],
+    "noEngineReferences": false
+}

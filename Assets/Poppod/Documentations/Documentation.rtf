@@ -1,0 +1,108 @@
+{\rtf1\ansi\deff0{\fonttbl{\f0\fmodern Courier New;}}\f0\fs20
+EASY THAI FONT ADJUSTMENT - DOCUMENTATION\par
+==========================================\par
+By Poppod Studio\par
+\par
+TABLE OF CONTENTS\par
+-----------------\par
+1. Installation\par
+2. Quick Start\par
+3. Features\par
+4. Advanced Usage\par
+5. API Reference\par
+6. Troubleshooting\par
+7. Best Practices\par
+\par
+\par
+1. INSTALLATION\par
+---------------\par
+Unity Package Manager (Git):\par
+   1. Window > Package Manager\par
+   2. + > Add package from git URL\par
+   3. https://github.com/poppod56/EasyThaiFontAdjustment.git\par
+\par
+Asset Store / Manual:\par
+   Import the package. All content lives under Assets/Poppod/.\par
+   The tool is Editor-only (Assets/Poppod/Editor/).\par
+\par
+\par
+2. QUICK START\par
+--------------\par
+   Tools > Easy Thai Font Adjustment\par
+   -> Select a TMP Font Asset\par
+   -> Click "Fix Everything Automatically"\par
+   -> Done!\par
+\par
+\par
+3. FEATURES\par
+-----------\par
+One-Click Fix\par
+   Automatically fixes all 522 Thai character pair combinations in seconds.\par
+\par
+Smart Calculation\par
+   Kerning values are calculated from:\par
+   - Font point size\par
+   - Ascender / descender height\par
+   - Scale factor\par
+\par
+Undo Support\par
+   - Automatic backup before changes\par
+   - One-click undo\par
+   - Unity Undo integration (Ctrl/Cmd + Z)\par
+\par
+Templates System\par
+   7 pre-configured templates covering consonants + vowels,\par
+   vowels + tone marks, and special ascender/descender cases.\par
+\par
+\par
+4. ADVANCED USAGE\par
+-----------------\par
+Custom Text Analysis\par
+   1. Advanced Options > Custom Tab\par
+   2. Enter sample text\par
+   3. Click "Analyze and Add Rules"\par
+\par
+Fine-Tuning\par
+   1. Advanced Options > Rules Tab\par
+   2. Edit X/Y values\par
+   3. Select / deselect pairs\par
+   4. Apply changes\par
+\par
+Template Customization\par
+   1. Advanced Options > Templates Tab\par
+   2. Select a template\par
+   3. Adjust default X/Y and offset values\par
+   4. Add rules\par
+\par
+\par
+5. API REFERENCE\par
+----------------\par
+See ScriptReference.txt for the full public API surface.\par
+\par
+\par
+6. TROUBLESHOOTING\par
+------------------\par
+Changes Not Visible\par
+   Reimport the Font Asset (Select > Right-click > Reimport).\par
+\par
+Incorrect Values\par
+   Use auto-calculation; only use offset for fine-tuning.\par
+\par
+Missing Characters\par
+   Check the font's Character Table includes the Thai Unicode range;\par
+   regenerate the font atlas if needed.\par
+\par
+\par
+7. BEST PRACTICES\par
+-----------------\par
+   1. Always back up Font Assets before applying.\par
+   2. Test with real text after applying changes.\par
+   3. Use one-click for general fixes.\par
+   4. Use advanced options only for special cases.\par
+   5. Document custom values for future reference.\par
+\par
+------------------------------------------\par
+(c) 2025 Poppod Studio - MIT License\par
+Support: support@poppod-studio.com\par
+
+}

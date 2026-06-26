@@ -1,0 +1,52 @@
+EASY THAI FONT ADJUSTMENT - QUICK START GUIDE
+=============================================
+By Poppod Studio
+
+WHAT IT DOES
+------------
+Fixes floating Thai vowels and tone marks in TextMeshPro font assets by
+generating Glyph Pair Adjustment Records (kerning) automatically.
+
+
+STEP 1 - OPEN THE TOOL
+----------------------
+   Tools > Easy Thai Font Adjustment
+
+   (Or right-click a TMP_FontAsset > Easy Thai Font Adjustment)
+
+
+STEP 2 - SELECT YOUR FONT
+-------------------------
+   Drag your TMP Font Asset into the "Font Asset" field.
+   The tool reports how many Thai consonants the font covers.
+
+
+STEP 3 - ONE-CLICK FIX
+----------------------
+   Click "Fix Everything Automatically".
+   The tool generates all 522 Thai pair adjustments based on the
+   font's metrics and writes them into the Font Asset.
+
+
+STEP 4 - VERIFY
+---------------
+   Type Thai text with stacked vowels/tone marks in any TMP component.
+   Vowels and tone marks should now sit correctly above the consonants.
+
+
+UNDO
+----
+   Click "Undo Last Changes" inside the tool, or press Ctrl/Cmd + Z.
+   A backup is taken automatically before every apply.
+
+
+NEXT STEPS
+----------
+   - Custom Tab: analyze your own sample text for problem pairs.
+   - Rules Tab: fine-tune individual X/Y values.
+   - Templates Tab: adjust the 7 built-in presets.
+
+   See Documentation.txt for full details.
+
+---------------------------------------------
+(c) 2025 Poppod Studio - support@poppod-studio.com

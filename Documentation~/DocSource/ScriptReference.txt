@@ -1,0 +1,64 @@
+EASY THAI FONT ADJUSTMENT - SCRIPT REFERENCE
+============================================
+By Poppod Studio
+
+Namespace: EasyThaiFont
+Assembly:  EasyThaiFontAdjustment.Editor  (Editor-only)
+Type:      public class EasyThaiFontAdjustment : EditorWindow
+
+
+ENTRY POINTS
+------------
+[MenuItem("Tools/Easy Thai Font Adjustment")]
+public static void ShowWindow()
+   Opens the tool window from the Unity menu bar.
+
+[MenuItem("CONTEXT/TMP_FontAsset/Easy Thai Font Adjustment")]
+static void ShowWindowForFontAsset(MenuCommand command)
+   Opens the tool with a font preselected, from a TMP_FontAsset
+   context menu.
+
+
+PUBLIC API
+----------
+public void SetFont(TMP_FontAsset font)
+   Sets the active font asset the tool operates on.
+
+
+DATA STRUCTURES
+---------------
+class AdjustmentRule
+   string ruleName;       // human-readable rule name
+   char   firstChar;      // first glyph in the pair
+   char   secondChar;     // second glyph in the pair
+   float  xPlacement;     // X offset applied to the second glyph
+   float  yPlacement;     // Y offset applied to the second glyph
+   bool   selected;       // included on Apply
+   string category;       // template/category grouping
+   string DisplayName;    // "firstChar + secondChar"
+   string Key;            // "firstChar_secondChar" (de-dup key)
+
+class PresetConfig
+   string name;
+   string description;
+   float  defaultX;       // calculated base value
+   float  defaultY;
+   float  offsetX;        // extra manual offset
+   float  offsetY;
+   float  FinalX;         // defaultX + offsetX
+   float  FinalY;         // defaultY + offsetY
+
+
+HOW IT WRITES TO THE FONT
+-------------------------
+Adjustments are written as Glyph Pair Adjustment Records into
+TMP_FontAsset.fontFeatureTable.glyphPairAdjustmentRecords.
+
+The record element type differs across versions. The tool aliases it
+via versionDefines so it compiles on both:
+   - TMP 3.0.6 (Unity 2021/2022): TMPro.TMP_GlyphPairAdjustmentRecord
+   - TMP 3.2+ / UGUI 2.0 / Unity 6: UnityEngine.TextCore.LowLevel.GlyphPairAdjustmentRecord
+
+
+--------------------------------------------
+(c) 2025 Poppod Studio - support@poppod-studio.com
